@@ -29,8 +29,10 @@ public class CommandLine {
             System.out.println("Verbose on: " + verbose);
         } catch (ParseException e) {
             HelpFormatter formatter = new HelpFormatter();
-            formatter.printHelp("java -jar VCFCombine.jar\n" + "Version: 1\n"
-                    + "Program for combining a VCF and its Annovar annotation (.avinput) file.", options);
+            formatter.printHelp("""
+                    java -jar VCFCombine.jar
+                    Version: 1
+                    Program for combining a VCF and its Annovar annotation (.avinput) file.""", options);
         }
 
     }
