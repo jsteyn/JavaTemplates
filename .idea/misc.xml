@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ExternalStorageConfigurationManager" enabled="true" />
+  <component name="MavenProjectsManager">
+    <option name="originalFiles">
+      <list>
+        <option value="$PROJECT_DIR$/FileIO/src/main/general/pom.xml" />
+        <option value="$PROJECT_DIR$/FileIO/src/main/fileio/pom.xml" />
+        <option value="$PROJECT_DIR$/FileIO/src/main/cli/pom.xml" />
+        <option value="$PROJECT_DIR$/FileIO/src/main/json/pom.xml" />
+        <option value="$PROJECT_DIR$/FileIO/src/main/properties/pom.xml" />
+        <option value="$PROJECT_DIR$/FileIO/src/main/sqlite/pom.xml" />
+        <option value="$PROJECT_DIR$/pom.xml" />
+        <option value="$PROJECT_DIR$/cli/pom.xml" />
+        <option value="$PROJECT_DIR$/fileio/pom.xml" />
+        <option value="$PROJECT_DIR$/json/pom.xml" />
+        <option value="$PROJECT_DIR$/general/pom.xml" />
+        <option value="$PROJECT_DIR$/properties/pom.xml" />
+        <option value="$PROJECT_DIR$/sqlite/pom.xml" />
+      </list>
+    </option>
+  </component>
+  <component name="ProjectRootManager" version="2" languageLevel="JDK_17" project-jdk-name="jbr-17" project-jdk-type="JavaSDK">
+    <output url="file://$PROJECT_DIR$/out" />
+  </component>
+</project>

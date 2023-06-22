@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="Encoding">
+    <file url="file://$PROJECT_DIR$/FileIO/src/main/cli/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/FileIO/src/main/cli/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/FileIO/src/main/fileio/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/FileIO/src/main/fileio/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/FileIO/src/main/general/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/FileIO/src/main/general/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/FileIO/src/main/json/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/FileIO/src/main/json/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/FileIO/src/main/properties/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/FileIO/src/main/properties/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/FileIO/src/main/sqlite/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/FileIO/src/main/sqlite/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/cli/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/cli/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/fileio/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/fileio/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/general/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/general/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/json/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/json/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/properties/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/properties/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/sqlite/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/sqlite/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/src/main/resources" charset="UTF-8" />
+  </component>
+</project>
