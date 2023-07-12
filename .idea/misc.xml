@@ -17,6 +17,8 @@
         <option value="$PROJECT_DIR$/general/pom.xml" />
         <option value="$PROJECT_DIR$/properties/pom.xml" />
         <option value="$PROJECT_DIR$/sqlite/pom.xml" />
+        <option value="$PROJECT_DIR$/Annotations/pom.xml" />
+        <option value="$PROJECT_DIR$/hibernate/pom.xml" />
       </list>
     </option>
   </component>
