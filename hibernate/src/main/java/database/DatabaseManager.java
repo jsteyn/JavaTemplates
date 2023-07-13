@@ -84,6 +84,45 @@ public class DatabaseManager {
     }
 
     /**
+     * Perform a database select operation with a custom from and where clause.
+     * <br>
+     * Must be called after {@link #open()}.
+     * @param type Type of the entity being selected for.
+     * @param from Names and aliases of the tables being queried. Must include the table associated with {@code T}.
+     * @param where HQL format conditional statement.
+     * @param parameters Mapping of values for any aliases defined in {@code where}.
+     * @return List of filtered elements from the table.
+     * @param <T> Entity representing the table being interfaced with.
+     */
+    public <T> List<T> read(Class<T> type, String from, String where, Map<String, Object> parameters) {
+        Query q = getSession().createQuery("from " + from + " where " + where, type);
+        for (Map.Entry<String, Object> value : parameters.entrySet()) {
+            q.setParameter(value.getKey(), value.getValue());
+        }
+        return q.getResultList();
+    }
+
+    /**
+     * Perform a database select operation with a custom from and where clause.
+     * <br>
+     * Must be called after {@link #open()}.
+     * @param type Type of the entity being selected for.
+     * @param fields HQL format list of fields to return.
+     * @param from HQL format names and aliases of the tables being queried. Must include the table associated with {@code T}.
+     * @param where HQL format conditional statement.
+     * @param parameters Mapping of values for any aliases defined in {@code where}.
+     * @return List of filtered elements from the table.
+     * @param <T> Entity representing the table being interfaced with.
+     */
+    public <T> List<T> read(Class<T> type, String fields, String from, String where, Map<String, Object> parameters) {
+        Query q = getSession().createQuery("select " + fields + " from " + from + " where " + where, type);
+        for (Map.Entry<String, Object> value : parameters.entrySet()) {
+            q.setParameter(value.getKey(), value.getValue());
+        }
+        return q.getResultList();
+    }
+
+    /**
      * Perform a database update operation on an existing record.
      * <br>
      * Must be called after {@link #open()}.

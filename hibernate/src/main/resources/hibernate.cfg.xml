@@ -23,5 +23,6 @@
         </property>
 
         <mapping class="database.model.Person" />
+        <mapping class="database.model.Address" />
     </session-factory>
 </hibernate-configuration>
