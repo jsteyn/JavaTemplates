@@ -1,13 +1,11 @@
 import database.DatabaseManager;
 import database.model.Person;
 
+import java.util.List;
+
 public class DatabaseManagerImpl extends DatabaseManager {
     public DatabaseManagerImpl() {
         super();
-    }
-
-    public void insert(Person person) {
-        getSession().save(person);
     }
 
     @Override
