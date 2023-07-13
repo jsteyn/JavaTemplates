@@ -21,15 +21,6 @@
         <property name="hibernate.hbm2ddl.auto">
             create-drop
         </property>
-        <property name="hibernate.show_sql">
-            true
-        </property>
-        <property name="hibernate.format_sql">
-            true
-        </property>
-        <property name="log4j.logger.org.hibernate">
-            info
-        </property>
 
         <mapping class="database.model.Person" />
     </session-factory>

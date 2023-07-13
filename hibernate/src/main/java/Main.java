@@ -1,7 +1,9 @@
+import database.DatabaseManager;
 import database.model.Person;
 
 import java.util.ArrayList;
 import java.util.Arrays;
+import java.util.HashMap;
 import java.util.List;
 
 public class Main {
@@ -29,14 +31,14 @@ public class Main {
     ));
 
     public static void main(String[] args) {
-        DatabaseManagerImpl databaseManager = new DatabaseManagerImpl();
+        DatabaseManager databaseManager = new DatabaseManager();
 
         databaseManager.open();
         printAllObjects(databaseManager.read(Person.class));
         databaseManager.close();
 
         databaseManager.open();
-        System.out.println("---Insert People---");
+        System.out.println("\n---Insert initial dataset---\n");
         for (Person person : data) {
             databaseManager.create(person);
         }
@@ -47,12 +49,13 @@ public class Main {
         databaseManager.close();
 
         databaseManager.open();
-        List<Person> weasleys = databaseManager.read(Person.class, "lastName = :name", new String[]{"name"}, new Object[]{"Weasley"});
-        databaseManager.close();
+        System.out.println("\n---Find all Weasleys and replace them with Woosleys---\n");
+        HashMap<String, Object> parameters = new HashMap<>();
+        parameters.put("name", "Weasley");
+        List<Person> weasleys = databaseManager.read(Person.class, "lastName = :name", parameters);
 
         printAllObjects(weasleys);
 
-        databaseManager.open();
         for (Person weasley : weasleys) {
             weasley.setLastName("Woosley");
             databaseManager.update(weasley);
@@ -64,7 +67,10 @@ public class Main {
         databaseManager.close();
 
         databaseManager.open();
-        Person voldemort = databaseManager.read(Person.class, "lastName = :name", new String[]{"name"}, new Object[]{"Voldemort"}).get(0);
+        System.out.println("\n---Eliminate the dark lord---\n");
+        parameters = new HashMap<>();
+        parameters.put("name", "Voldemort");
+        Person voldemort = databaseManager.read(Person.class, "lastName = :name", parameters).get(0);
         databaseManager.delete(voldemort);
         databaseManager.close();
 
@@ -74,7 +80,7 @@ public class Main {
     }
 
     public static <T> void printAllObjects(List<T> objects) {
-        System.out.println("---Objects---");
+        System.out.println("Objects:");
         for (T obj : objects)
             System.out.println("    " + obj);
     }
