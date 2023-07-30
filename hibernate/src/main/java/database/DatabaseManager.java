@@ -77,9 +77,7 @@ public class DatabaseManager {
      */
     public <T> List<T> read(Class<T> type, String where, Map<String, Object> parameters) {
         Query<T> q = getSession().createQuery("from " + type.getName() + " where " + where, type);
-        for (Map.Entry<String, Object> value : parameters.entrySet()) {
-            q.setParameter(value.getKey(), value.getValue());
-        }
+        q.setProperties(parameters);
         return q.getResultList();
     }
 
@@ -96,9 +94,7 @@ public class DatabaseManager {
      */
     public <T> List<T> read(Class<T> type, String from, String where, Map<String, Object> parameters) {
         Query q = getSession().createQuery("from " + from + " where " + where, type);
-        for (Map.Entry<String, Object> value : parameters.entrySet()) {
-            q.setParameter(value.getKey(), value.getValue());
-        }
+        q.setProperties(parameters);
         return q.getResultList();
     }
 
@@ -116,9 +112,7 @@ public class DatabaseManager {
      */
     public <T> List<T> read(Class<T> type, String fields, String from, String where, Map<String, Object> parameters) {
         Query q = getSession().createQuery("select " + fields + " from " + from + " where " + where, type);
-        for (Map.Entry<String, Object> value : parameters.entrySet()) {
-            q.setParameter(value.getKey(), value.getValue());
-        }
+        q.setProperties(parameters);
         return q.getResultList();
     }
 
